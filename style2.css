@@ -31,6 +31,7 @@ header.navbar{
     }
     label{
         z-index: 30;
+
     }
 }
 header.navbar.scroll{
@@ -89,7 +90,7 @@ header.navbar.scroll{
 }
 #research:hover ul.drop-down{
     display: flex;
-    /* animation: right 1s; */
+    animation: right 0.3s;
 }
 .drop-down a:hover{
     color:red;
@@ -130,7 +131,6 @@ header.navbar.scroll{
                 background-color: #11284c97;
                 position: absolute;
                 content: '';
-                /* z-index: -1; */
 
             }
             .latter{
@@ -213,51 +213,20 @@ header.navbar.scroll{
     }
 
 }
-@keyframes shine{
-    0%{
-        transform : translateX(-400px);
-    }
-    100%{
-        transform: translateX(300px);
-    }
-}
-@keyframes pop {
-    0%{
-        opacity: 0;
-        scale: 0;
-    }
-    100%{
-        opacity: 1;
-        scale: 1;
-    }
-}
-@keyframes right {
-    0%{
-        opacity: 0;
-        transform: translateX(-200px);
-    }
-    100%{
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
 
 #container-two{
     padding: 2rem 10%;
     background-color: #11284c;
     position: relative;
-    z-index: -2;
-    overflow: hidden;
+    z-index: -1;
     h1{
         font-size: 30px;
     }
     p{
         font-size: 20px;
         line-height: 40px;
-        animation: left ;
-        animation-timeline: view();
     }
-
+    
     .background{
         position: absolute;
         width: 80vw;
@@ -267,6 +236,7 @@ header.navbar.scroll{
         z-index: -1;
     }
     .text-side{
+        animation: right 0.5s ease-in-out;
         z-index: 10;
         span{
             color: red;
@@ -282,14 +252,21 @@ header.navbar.scroll{
             margin-top: 4rem;
             text-align: center;
             font-weight: bold;
+            
+            .img{
+                animation: left both;
+                animation-timeline: view(70% 5%);
+            }
         }
     }
     #bottom-text-two{
-
+        
         #box-img{
             .img{
                 img{
-                width: 100%;
+                    animation: pop both;
+                    animation-timeline: view(90% 5%);
+                    width: 100%;
                 }
             }
             .two{
@@ -329,11 +306,11 @@ header.navbar.scroll{
             /* justify-content: center; */
             animation: fromRight 0.5s ease-in-out;
             #link-one{
-            text-align: center;
+                text-align: center;
             flex-direction: column;
-            }
-            #research:hover{
-                color: red;
+        }
+        #research:hover{
+            color: red;
                 .drop-down{
                     text-align: start;
                     position: relative;
@@ -345,7 +322,7 @@ header.navbar.scroll{
             } 
         }
     }
-
+    
     .navbar.scroll .logo img{
         width: 100px;
     }
@@ -387,30 +364,19 @@ header.navbar.scroll{
         }
     }
 }
-@keyframes fromRight {
-    0%{
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    100%{
-        transform: translateX(0);
-        opacity: 1;
-    }
-    
-}
 
-    
 
-    
+
+
 
 @media (width<=605px) {
-     
+    
     #container-one{
         #box-text{
             .text{
                 height: 35vh;
                 background-position: 0 0 ;
-
+                
             }
         }
     }
@@ -426,4 +392,64 @@ header.navbar.scroll{
             }
         }
     }
+}
+
+
+@keyframes shine{
+    0%{
+        transform : translateX(-400px);
+    }
+    100%{
+        transform: translateX(300px);
+    }
+}
+@keyframes pop {
+    0%{
+        opacity: 0;
+        scale: 0;
+    }
+    100%{
+        opacity: 1;
+        scale: 1;
+    }
+}
+@keyframes right {
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes left {
+    0%{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+}
+@keyframes autoRotateAnimation {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes fromRight {
+    0%{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
 }
