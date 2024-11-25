@@ -135,7 +135,7 @@ header.navbar.scroll{
             }
             .latter{
                 z-index: 10;
-                animation: pop 0.5s ease-in-out;
+                animation: pop 2s ease-in-out;
             }
             
             h1,p,button{
@@ -236,7 +236,7 @@ header.navbar.scroll{
         z-index: -1;
     }
     .text-side{
-        animation: right 0.5s ease-in-out;
+        animation: right 1.5s ease-in-out;
         z-index: 10;
         span{
             color: red;
