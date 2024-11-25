@@ -90,7 +90,7 @@ header.navbar.scroll{
 }
 #research:hover ul.drop-down{
     display: flex;
-    animation: right 0.3s;
+    animation: left 0.1s;
 }
 .drop-down a:hover{
     color:red;
@@ -257,7 +257,7 @@ header.navbar.scroll{
         z-index: -1;
     }
     .text-side{
-        animation: fromRight 1s ease-in-out;
+        animation: fromleft 1s ease-in-out;
         z-index: 10;
         span{
             color: red;
@@ -324,11 +324,10 @@ header.navbar.scroll{
             position: fixed;
             background-color: rgb(255, 255, 255);
             top:2rem;
-            /* justify-content: center; */
             animation: fromRight 0.5s ease-in-out;
             #link-one{
                 text-align: center;
-            flex-direction: column;
+                flex-direction: column;
         }
         #research:hover{
             color: red;
@@ -464,9 +463,20 @@ header.navbar.scroll{
         transform: rotate(360deg);
     }
 }
-@keyframes fromRight {
+@keyframes fromleft {
     0%{
         transform: translateX(-100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+}
+@keyframes fromRight {
+    0%{
+        transform: translateX(100%);
         opacity: 0;
     }
     100%{
