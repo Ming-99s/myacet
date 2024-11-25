@@ -335,6 +335,7 @@ header.navbar.scroll{
             #research:hover{
                 color: red;
                 .drop-down{
+                    text-align: start;
                     position: relative;
                     /* position: absolute; */
                     margin: 0;
